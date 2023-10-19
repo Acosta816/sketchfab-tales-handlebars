@@ -1,0 +1,459 @@
+@font-face {
+  font-family: 'floral_capitalsregular';
+  src: url('./floralcapitals-webfont.woff2') format('woff2'),
+       url('./floralcapitals-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'defloreregular';
+  src: url('./deflore-webfont.woff2') format('woff2'),
+       url('./deflore-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+
+  }
+  body{
+     /* background-color: violet; */
+     
+     font-family: 'Roboto', sans-serif;
+     font-weight: bold;
+     background: URL('https://i.ibb.co/4NVpPmt/watercolor-background-87374-57.webp');
+  }
+
+  main h1 {
+    font-family: 'defloreregular';
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffffa1;
+  }
+  nav {
+    background: #f0a6ca9c;
+    /* height: 80px; */
+    width: 100%;
+    text-align: right;
+    
+  }
+
+  label.logo {
+    color: white;
+    font-size: 35px;
+    /* line-height: 80px; */
+    /* padding: 0 100px; */
+    /* font-weight: bold; */
+    font-weight: normal;
+    position: absolute;
+    top: 22px;
+    left: 40px;
+    font-family: 'defloreregular';
+  }
+
+  nav ul {
+    /* float: right; */
+    margin-right: 20px;
+    display: inline-block;
+
+
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+  }
+
+  a.active,a:hover {
+    background: #1b9bff;
+    transition: .5s;
+  }
+
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* ---------------------------------------------turnJS */
+
+
+  .flipbook {
+    transition: margin-left 0.25s ease-out;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  } 
+  
+  
+  #flipbook .hard{
+    /* background:#ccc !important; */
+    color:#333;
+    -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666;
+    font-weight:bold;
+  }
+  
+  #flipbook .odd{
+  background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #FFF), color-stop(1, #DADADA));
+  background-image:-webkit-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+     background-image:-moz-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-ms-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:-o-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+    background-image:linear-gradient(right, #FFF 95%, #C4C4C4 100%); 
+     -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666; 
+    
+  }
+  
+  #flipbook .even{
+     background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada)); 
+     background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%); 
+     background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:linear-gradient(left, #fff 95%, #dadada 100%); 
+     -webkit-box-shadow:inset 0 0 5px #666;
+    -moz-box-shadow:inset 0 0 5px #666;
+    -o-box-shadow:inset 0 0 5px #666;
+    -ms-box-shadow:inset 0 0 5px #666;
+    box-shadow:inset 0 0 5px #666; 
+  }
+  
+  /* ---------------------------------------------turnJS */
+
+  /* @media (max-width: 952px) {
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  } */
+/* 
+  @media (max-width: 858px) {
+    .checkbtn{
+      display: block;
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a {
+      font-size: 20px;
+    }
+    a:hover,a.active{ 
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  } */
+  section{
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 70px;
+    color: #673ab763;
+    border: solid 7px #673ab763;
+    width: 500px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .storiesList {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+  }
+
+  .indexitems.createButtonBook {
+    text-align: center;
+    margin-bottom: 10px;
+    /* background: url(https://i.ibb.co/Ws2XSf6/2022-08-31-0no-Kleki.png),linear-gradient(to right, #00000073, rgb(255 255 255 / 0%)); */
+    background: url(),url(https://i.ibb.co/Ws2XSf6/2022-08-31-0no-Kleki.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    height: 224px;
+    width: 256px;
+    padding-top: 49px;
+}
+
+.indexitems {
+  text-align: center;
+  margin-bottom: 10px;
+  /* background: url(https://i.ibb.co/Ws2XSf6/2022-08-31-0no-Kleki.png),linear-gradient(to right, #00000073, rgb(255 255 255 / 0%)); */
+  background: url(),url(../images/bookIconClosed-removebg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  height: 244px;
+  width: 256px;
+  padding-top: 49px;
+}
+
+.createButtonBook {
+  background: url(https://i.ibb.co/NsDQCbZ/kindpng-46959.png),url(https://i.ibb.co/Ws2XSf6/2022-08-31-0no-Kleki.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.quill {
+  position: absolute;
+  left: 185px;
+  top: -48px;
+  width: 40%;
+}
+
+.indexlink {
+  font-size: 40px;
+  color: #004f8e;
+
+}
+  
+
+  #createButton {
+    margin-top: 30px;
+    font-size: 30px;
+    background: white;
+
+  }
+
+  .sketchfab-embed-wrapper {
+    text-align: center;
+  }
+
+  form {
+    text-align: center;
+  }
+
+.login { 
+  width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.signup {
+  width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.usersIndex {
+  padding: 5px;
+    /* margin-left: 30px; */
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    font-size: 30px;
+    border: solid 7px #673ab763;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.usersIndexLink {
+  color: #8bc34a;
+
+}
+
+.createh1 {
+  margin-bottom: 20px;
+
+}
+
+.createStoryForm {
+  width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 7px #673ab763;
+
+}
+
+.createStoryFieldset {
+  border: solid 7px #673ab763;
+  margin: 5px;
+}
+
+.p1 {
+  background: url(https://i.ibb.co/F5mZmkC/redbook.jpg),-webkit-gradient(linear, right top, left top, color-stop(0.95, #FFF), color-stop(1, #DADADA))!important;
+    background-size: cover !important;
+}
+
+.p2 {
+  background: -webkit-gradient(linear, right top, left top, color-stop(0.95, rgba(0, 0, 0, 0.953)), color-stop(1, #000000))!important;
+    background-size: cover;
+    text-align: center;
+}
+
+.bookTitleContainer {
+  position: absolute;
+  top: 24%;
+  width: inherit;
+}
+
+.authorCoverP {
+  position: absolute;
+    left: 245px;
+    font-size: 25px;
+}
+
+.authorH1Cover {
+  color: #2eff3e;
+  border: none;
+  width: 85%;
+  font-weight: normal;
+  font-family: 'floral_capitalsregular';
+  background-color: transparent;
+}
+
+iframe {
+  margin-top: 12%;
+  max-width: 97%;
+  max-height: 52%;
+}
+
+.storyTextP {
+  margin-left: 54px;
+  margin-right: 54px;
+  margin-top: 74px;
+}
+
+.storyTextP::first-letter {
+  font-family: 'floral_capitalsregular';
+  font-size: 104px;
+    font-weight: normal;
+}
+
+/* Basic sample ---------------------------------------------------------------------------------------------------------*/
+
+body{
+	/* overflow:hidden; */
+	/* background-color:#fcfcfc; */
+	margin:0;
+	padding:0;
+}
+
+.flipbook-viewport{
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+
+.flipbook-viewport .container{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:auto;
+}
+
+.flipbook-viewport .flipbook{
+	width:922px;
+	height:600px;
+	left:-461px;
+	top:-300px;
+}
+
+.flipbook-viewport .page{
+	width:461px;
+	height:600px;
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+.flipbook .page{
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+.flipbook-viewport .page img{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin:0;
+}
+
+.flipbook-viewport .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px #ccc;
+	-moz-box-shadow:0 0 20px #ccc;
+	-o-box-shadow:0 0 20px #ccc;
+	-ms-box-shadow:0 0 20px #ccc;
+	box-shadow:0 0 20px #ccc;
+}

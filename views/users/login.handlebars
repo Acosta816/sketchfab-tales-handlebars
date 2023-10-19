@@ -1,0 +1,23 @@
+{{>header}}
+
+<h1>LOGIN</h1>
+
+<form class="login" method="POST" action="/users/login">
+    <fieldset>
+        <label for="email" >e-mail</label>
+        <input id="email" type="email" name="email">
+    </fieldset>
+
+    <fieldset>
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password">
+    </fieldset>
+
+    <input type="submit" value="Submit">
+
+    or <a href="/users/new">Sign Up</a>
+    
+    
+</form>
+
+{{>footer}}

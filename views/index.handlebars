@@ -1,0 +1,27 @@
+{{> header}}
+
+<h1>
+  {{#if collectionAuthor}}
+    {{collectionAuthor}}'s Collection
+  {{else}}
+    ALL STORIES
+  {{/if}}
+</h1>
+<img src="https://i.ibb.co/vcZKkWt/tgif-030.gif" />
+<ul class="storiesList">
+  <li class="indexitems createButtonBook">
+    <img class="quill" src="./images/quill.png" /><button id="createButton">
+      <a href="/stories/new">CREATE</a>
+    </button>
+  </li>
+
+  {{#each stories}}
+  <li class="indexitems">
+    <a class="indexlink" href="/stories/{{this.id}}">
+      📖 {{this.title}}
+    </a>
+  </li>
+  {{/each}}
+</ul>
+
+{{> footer}}

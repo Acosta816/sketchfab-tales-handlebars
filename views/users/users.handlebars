@@ -1,0 +1,16 @@
+{{> header}}
+
+<h1>AUTHORS</h1>
+
+{{!-- You can use Handlebars' built-in logging helper to log data --}}
+{{log users}}
+
+<ul class="usersIndex">
+    {{#each users}}
+    <li>
+        <a class="usersIndexLink" href="/stories/user/{{this.id}}">{{this.firstName}} {{this.lastName}}</a>
+    </li>
+    {{/each}}
+</ul>
+
+{{> footer}}
